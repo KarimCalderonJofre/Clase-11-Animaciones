@@ -1,0 +1,87 @@
+/* Agrega una clase cuad para darle el mismo formato a todos los cuadraditos y no tener que repetirlo en cada uno. */
+.cuad{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+
+.cuadradito1{
+    /* La clase es "cuadradito" pero el nombre de la animaión es "cuadrado" */
+    animation-name: cuadradoAnim1;
+    /* Necesitamos saber cuanto dura */
+    animation-duration: 3s;
+}
+
+@keyframes cuadradoAnim1{
+    from{
+        background-color: grey;
+    }
+    to{
+        background-color: greenyellow;
+    }
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.cuadradito2{
+    animation-name:cuadradoAnim2;
+    animation-duration: 6s;
+}
+
+@keyframes cuadradoAnim2{
+    0%{
+        background-color: grey;
+    }
+    30%{
+        background-color: olive;
+        width:150px;
+    }
+    50%{
+        background-color: greenyellow;
+        width:100px;
+        height:100px;
+        /* Le agregue estas dimensiones de 100px para evitar que se mezclen el ensanchado y el cambio de altura del div */
+    }
+    75%{
+        background-color: mediumseagreen;
+        height:150px;
+    }
+    /* La animación al final vuelve al 0%. No se queda en el último frame porque no le hemos pedido que lo haga*/
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.cuadradito3{
+    animation-name: cuadradoAnim2;
+    animation-duration: 5s;
+    animation-delay: 2s;
+/* animation-delay lo que hace es que empieza la animación luego de 2s. Es decir los 5s de la animación empiezan luego de que han pasado 2s. */
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.cuadradito4{
+    animation-name: cuadradoAnim2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* Por defecto "animation-iteration-count" es 1. */
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.cuadradito5{
+    animation-name:cuadradoAnim5;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes cuadradoAnim5{
+    from{
+        background-color: orangered;
+    }
+    to{
+        background-color: darkseagreen;
+    }
+}
